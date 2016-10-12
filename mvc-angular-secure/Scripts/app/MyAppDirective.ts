@@ -15,7 +15,9 @@
         return {
             restrict: "EA",
             link: link,
-            template: "<h1>Run a secured Angular Web Api app</h1>"
+            templateUrl: "/Scripts/App/my-app.html",
+            controller: MyAppController,
+            controllerAs: "vm"
         }
 
         function link(scope: IMyAppDirectiveScope, element: ng.IAugmentedJQuery, attrs: IMyAppDirectiveAttributes) {
