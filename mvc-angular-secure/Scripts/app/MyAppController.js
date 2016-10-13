@@ -30,3 +30,4 @@ var App;
     App.MyAppController = MyAppController;
 })(App || (App = {}));
 angular.module("app").controller("MyAppController", App.MyAppController);
+//# sourceMappingURL=MyAppController.js.map

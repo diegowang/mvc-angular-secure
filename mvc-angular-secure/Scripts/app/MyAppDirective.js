@@ -15,3 +15,4 @@ var App;
     }
     angular.module("app").directive("myApp", MyAppDirective);
 })(App || (App = {}));
+//# sourceMappingURL=MyAppDirective.js.map
