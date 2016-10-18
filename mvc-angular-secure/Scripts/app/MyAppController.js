@@ -18,8 +18,13 @@ var App;
                 _this.values = response.data;
             })
                 .catch((function (reason) {
-                _this.isVisibleErrorMessage = true;
-                _this.errorMessage = reason.statusText;
+                if (reason.status == 401) {
+                    _this.$window.location.href = '/Account/Login?returnurl=/Home/About';
+                }
+                else {
+                    _this.isVisibleErrorMessage = true;
+                    _this.errorMessage = reason.statusText;
+                }
             }));
             return this.values;
         };
