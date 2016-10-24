@@ -3,6 +3,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
+using mvc_angular_secure.Infrastructure;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
@@ -10,7 +11,7 @@ using mvc_angular_secure.Models;
 
 namespace mvc_angular_secure.Controllers
 {
-    [Authorize]
+    [CustomAuthorize]
     public class ManageController : Controller
     {
         private ApplicationSignInManager _signInManager;
