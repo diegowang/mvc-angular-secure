@@ -6,6 +6,7 @@ using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
 using Owin;
 using mvc_angular_secure.Models;
+using Owin.Security.CAS;
 
 namespace mvc_angular_secure
 {
@@ -63,6 +64,14 @@ namespace mvc_angular_secure
             //    ClientId = "",
             //    ClientSecret = ""
             //});
+
+            CasAuthenticationOptions casOptions = new CasAuthenticationOptions()
+            {
+                CasServerUrlBase = "https://login-test.cc.nd.edu/cas",
+                AuthenticationType = "Notre Dame CAS Service",
+                Caption = "Notre Dame CAS Service",
+            };
+            app.UseCasAuthentication(casOptions);
         }
     }
 }
